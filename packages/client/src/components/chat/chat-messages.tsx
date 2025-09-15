@@ -45,7 +45,7 @@ const ChatMessages = ({ messages }: Props) => {
     <>
       {messages.map((message, index) => (
         <div
-          className={`text px-4 mb-2 py-2 rounded-xl ${message.role === 'user' ? 'bg-gray-200 self-end ' : 'self-start'}`}
+          className={`text px-4 max-w-xl prose mb-2 py-2 rounded-xl ${message.role === 'user' ? 'bg-gray-200 self-end ' : 'self-start'}`}
           key={index}
           ref={messages.length - 1 === index ? messagesContainerRef : null}
         >
